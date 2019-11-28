@@ -4,6 +4,15 @@
 	<title></title>
 </head>
 <body>
+	{%for p in products%}
+	<div class="card">
+		<img src ="{{mango.jpg}}" alt="a picture of a mango" style="width:100%">
+		<h1>{{p.name}}</h1>
+		<p class="price">{{p.price}}</p>
+		<p>{{p.descreption}}</p>
+		<p><a href="{{url_for('addtocart',productid=p.id}}">
+		<Button type ="submit">add to cart</Button></a></p>
+	</div>
 
 <!-- Delete this section when you reach this file -->
 <h1 style="font-size: 55px;position: absolute;left: 41.5%;top:28%">Cart Function</h1>
